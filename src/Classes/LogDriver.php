@@ -14,16 +14,18 @@ class LogDriver implements LoggerInterface
      */
     public function log(Event $event): void
     {
+        $logFIleName = __DIR__ . '/../../logs/log-' . date('Y-m-d') . '.log';
+
         if (file_exists(__DIR__ . '/../../logs/')) {
             file_put_contents(
-                __DIR__ . '/../../logs/log',
+                $logFIleName,
                 PHP_EOL . $event->getFormattedMessage(),
                 FILE_APPEND
             );
         } else {
             mkdir(__DIR__ . '/../../logs', 0775);
             file_put_contents(
-                __DIR__ . '/../../logs/log',
+                $logFIleName,
                 PHP_EOL . $event->getFormattedMessage(),
                 FILE_APPEND
             );
