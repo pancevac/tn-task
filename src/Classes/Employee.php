@@ -55,9 +55,10 @@ class Employee
         $this->totalCharged += $charged;
         $this->station->addCharged($charged);
 
-        $this->log(new Event('Naplaćena putarina za ' .
+        $this->log(new Event('Naplaćena putarina za "' .
             $vehicle->getBrand() . ' ' .
-            $vehicle->getModel() . ' u iznosu: ' .
+            $vehicle->getModel() . '" od strane ' .
+            $this->getName() . ' u iznosu: ' .
             $charged));
     }
 
