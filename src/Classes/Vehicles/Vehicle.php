@@ -3,12 +3,11 @@
 namespace App\Classes\Vehicles;
 
 use App\Classes\Event;
-use App\Interfaces\LoggerInterface;
-use App\Traits\Logger;
+use App\Traits\CanLog;
 
-abstract class Vehicle implements LoggerInterface
+abstract class Vehicle
 {
-    use Logger;
+    use CanLog;
 
     /**
      * @var string

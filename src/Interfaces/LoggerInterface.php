@@ -8,7 +8,7 @@ use App\Classes\Event;
 interface LoggerInterface
 {
     /**
-     * Log event to log file.
+     * Log event via log driver.
      *
      * @param Event $event
      */

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\Traits;
+namespace App\Classes;
 
-use App\Classes\Event;
+use App\Interfaces\LoggerInterface;
 
-trait Logger
+class LogDriver implements LoggerInterface
 {
     /**
      * Log event to log file.
@@ -28,6 +28,5 @@ trait Logger
                 FILE_APPEND
             );
         }
-
     }
 }

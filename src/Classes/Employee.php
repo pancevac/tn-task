@@ -2,13 +2,12 @@
 
 namespace App\Classes;
 
-use App\Interfaces\LoggerInterface;
 use App\Classes\Vehicles\Vehicle;
-use App\Traits\Logger;
+use App\Traits\CanLog;
 
-class Employee implements LoggerInterface
+class Employee
 {
-    use Logger;
+    use CanLog;
 
     /**
      * @var TollStation
